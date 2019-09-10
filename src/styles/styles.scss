@@ -1,0 +1,105 @@
+@import './variables.scss';
+
+.main-container{
+    width: $mainContainer;
+    margin: 0 auto
+}
+.main-btn{
+    background: $mainColor;
+    padding: 7px 25px;
+    border: none;
+    font-size: 14px;
+    color: #fff;
+    font-weight: 600;
+    outline: none;
+    border-radius: 30px;
+}
+
+.header{
+    background: #141415;
+    nav{
+        width: 1000px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 0;
+        .mainLogo{
+            display: flex;  
+            align-items: center;
+            h3{
+                color: #fff;
+                margin: 5px;
+            }
+        }
+        ul{
+            display: flex;
+            color: #fff;
+            width: calc(100% - 300px);
+            justify-content: flex-end;
+            list-style: none;
+            li{
+                margin: 0 10px;
+                a{
+                    color: #fff;
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+}
+.footer{
+    background: #141415;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+    position: relative;
+    top: calc(100vh - 146px);
+}
+.profile{
+    background: url('../images/background.jpg');
+    background-size: cover;
+    &--info{
+        padding: 30px 0;
+        .personal--info{
+            position: relative;
+            z-index: 2;
+            bottom: -13em;
+            left: 25px;
+            width: 22%;
+            text-align: center;
+            .profile--photo{
+                width: 200px;
+                height: 200px;
+                border-radius: 50%;
+                border: 10px solid #fff;
+                overflow: hidden;
+                left: 25px;
+                img{
+                    width: 200px;
+                    height: 200px;
+                }
+             }   
+             h3{
+                 color: #27aae1;
+                 margin: 0 0 5px 0;
+                 font-size: 22px;
+             }
+             p{
+                 color: #666;
+                 margin: 0;
+             }
+        }
+        .follow-info{
+            height: 50px;
+            background: rgba(0,0,0, 0.8);
+            color: #fff;
+            display: flex;
+            justify-content: flex-end;
+            padding: 10px 25px;
+            p{
+                margin: 10px;
+            }
+        }
+    }
+}
