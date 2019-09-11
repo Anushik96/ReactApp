@@ -12,7 +12,7 @@ const Dialog = () => {
             image: profilePic,
             name: 'Jany Doe',
             message: 'Hello how are ...',
-            msgCount:'3'
+            msgCount:'3',
         },
         {
             id: '2',
@@ -28,16 +28,31 @@ const Dialog = () => {
             message: 'Hi guys...',
             msgCount:'2'
         },
-    ]
+    ];
+    const dialogs = [{
+            id: '1',
+            message:'Hello how are you, please can you tell me what it is, I can not understand it',
+            image: profilePic,
+        },
+        {
+            id: '2',
+            message:'Hi I am fine and you?',
+            image: profilePic,
+        },
+        {
+            id: '3',
+            message:'Me too, how is going your job in the office?',
+            image: profilePic,
+        }
+    ];
     return (
         <div className='main-container chatPage'>
             <div className={messages.chat}>
                 <div className={messages.chat__list}>
-                    { users.map((user) => <DialogItems key={user.id} name={user.name} message={user.message} image={user.image}  msgCount={user.msgCount}/> )}
+                    { users.map((user) => <DialogItems id={user.id} name={user.name} message={user.message} image={user.image}  msgCount={user.msgCount}/> )}
                 </div>
                 <div className={messages.messages}>
-                    <Messages/>
-                    <Messages/>
+                    { dialogs.map((dialog) =>  <Messages key={dialog.id} message={dialog.message} image={dialog.image}/> )}
                     <div className={messages.send}>
                         <textarea name="" id=""  rows="2"></textarea>
                         <button className={messages.send_btn}>Send</button>
