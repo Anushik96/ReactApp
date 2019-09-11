@@ -1,0 +1,36 @@
+.chat{
+  display: flex;
+  box-shadow: 0 0 7px 0px #f3f1f1;
+  height: calc(100vh - 200px);
+  .chat__list {
+    flex: 30%;
+    border-right: 1px solid #eaeaea;
+    overflow-y: auto;
+  }
+  .messages {
+    flex: 70%;
+    position: relative;
+  }
+  .send{
+    display: flex;
+    align-items: center;
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    textarea{
+      width: calc(100% - 72px);
+      border: 1px solid #eee;
+      border-radius: 3px;
+      outline: none;
+    }
+    &_btn{
+      background: #141415;
+      color: #fff;
+      border: none;
+      padding: 7px 20px;
+      font-size: 17px;
+      border-radius: 3px;
+    }
+  }
+
+}

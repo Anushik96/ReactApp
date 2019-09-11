@@ -1,0 +1,16 @@
+
+ .messages__content{
+    display: flex;
+    padding: 15px;
+    img{
+      flex-basis: 70px;
+      height: 70px;
+      border-radius: 50%;
+    }
+    .sendMsg{
+      background: #29abe214;
+      padding: 15px;
+      border-radius: 10px;
+      margin: 5px 10px;
+    }
+  }

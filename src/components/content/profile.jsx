@@ -9,7 +9,7 @@ const Profile = () =>{
             <div className="profile">
                 <div className="profile--info">
                     <div className="personal--info">
-                        <div className="profile--photo">`
+                        <div className="profile--photo">
                             <img src={profilePic} alt=""/>  
                         </div>
                         <h3>Sose Cruiz</h3>

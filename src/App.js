@@ -3,7 +3,7 @@ import './App.css';
 import Header from './components/header';
 import Footer from './components/footer';
 import Profile from './components/content/profile';
-import Messages from "./components/content/messages/messages";
+import Dialog from "./components/content/dialog/dialog";
 import {BrowserRouter, Route} from "react-router-dom";
 
 const App = () => {
@@ -11,8 +11,10 @@ const App = () => {
         <BrowserRouter>
             <div className="App">
                 <Header/>
-                <Route path='/profile'  component={Profile}/>
-                <Route path='/messages'  component={Messages}/>
+                <div className='content'>
+                    <Route path='/profile'  component={Profile}/>
+                    <Route path='/dialog'  component={ Dialog}/>
+                </div>
                 <Footer/>
             </div>
         </BrowserRouter>
