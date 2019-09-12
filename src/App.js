@@ -6,14 +6,14 @@ import Profile from './components/content/profile';
 import Dialog from "./components/content/dialog/dialog";
 import {BrowserRouter, Route} from "react-router-dom";
 
-const App = () => {
+const App = (props) => {
     return (
         <BrowserRouter>
             <div className="App">
                 <Header/>
                 <div className='content'>
-                    <Route path='/profile'  component={Profile}/>
-                    <Route path='/dialog'  component={ Dialog}/>
+                    <Route path='/profile'  render={ () => <Profile  posts={props.posts}/>}/>
+                    <Route path='/dialog'  render={ () => <Dialog  users={props.users} dialogs={props.dialogs} /> }/>
                 </div>
                 <Footer/>
             </div>

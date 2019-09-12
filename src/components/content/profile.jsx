@@ -3,7 +3,7 @@ import '../../styles/styles.scss'
 import profilePic from '../../images/profilePic.jpg';
 import PostsPage from "./postPage/posts-page";
 
-const Profile = () =>{
+const Profile = (props) =>{
     return(
         <div className="main-container">
             <div className="profile">
@@ -21,7 +21,7 @@ const Profile = () =>{
                     </div>
                 </div>
             </div>
-            <PostsPage/>
+            <PostsPage posts={props.posts}/>
         </div>
     )
 }
