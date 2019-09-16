@@ -12,8 +12,9 @@ const App = (props) => {
             <div className="App">
                 <Header/>
                 <div className='content'>
-                    <Route path='/profile'  render={ () => <Profile  posts={props.posts}/>}/>
-                    <Route path='/dialog'  render={ () => <Dialog  users={props.users} dialogs={props.dialogs} /> }/>
+                    <Route path='/profile'  render={ () => <Profile  posts={props.appState.postsPage.posts}/>}/>
+                    <Route path='/dialog'  render={ () => <Dialog  users={props.appState.messagesPage.users}
+                                                                   dialogs={props.appState.messagesPage.dialogs} /> }/>
                 </div>
                 <Footer/>
             </div>

@@ -12,10 +12,13 @@ const Dialog = (props) => {
         <div className='main-container chatPage'>
             <div className={messages.chat}>
                 <div className={messages.chat__list}>
-                    { props.users.map((user) => <DialogItems id={user.id} name={user.name} message={user.message} image={user.image}  msgCount={user.msgCount}/> )}
+                    { props.users.map((user) => <DialogItems id={user.id}
+                                                             name={user.name}
+                                                             message={user.message}
+                                                             image={user.image}  msgCount={user.msgCount}/> )}
                 </div>
                 <div className={messages.messages}>
-                    { props.dialogs.map((dialog) =>  <Messages key={dialog.id} message={dialog.message} image={dialog.image}/> )}
+                    { props.dialogs.map((dialog) =>  <Messages id={dialog.id} message={dialog.message} image={dialog.image} status={dialog.status}/> )}
                     <div className={messages.send}>
                         <textarea name="" id=""  rows="2"></textarea>
                         <button className={messages.send_btn}>Send</button>
