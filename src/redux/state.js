@@ -73,6 +73,15 @@ const state = {
             }
         ],
     },
+};
+
+export const addNewPost = (newPost) => {
+    let addNew = {
+        id: '4',
+        name: 'Luisa Dallas',
+        desc: newPost,
+        image: profilePic,
+    }
+    state.postsPage.posts.push(addNew)
 }
-;
 export default state;

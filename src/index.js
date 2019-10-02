@@ -6,11 +6,14 @@ import * as serviceWorker from './serviceWorker';
 import profilePic from "./images/profilePic.jpg";
 import image from "./images/profilePic.jpg";
 import state from './redux/state';
+import {addNewPost} from './redux/state';
+import {BrowserRouter} from "react-router-dom";
 
 
-
-
-ReactDOM.render( <App  appState={state} />, document.getElementById('root'));
+ReactDOM.render(
+    <BrowserRouter>
+        <App appState={state} addNewPost={addNewPost}/>
+    </BrowserRouter>, document.getElementById('root'));
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.

@@ -6,17 +6,17 @@ import style from './postPage.module.scss'
 
 const PostsPage = (props) => {
     let news  = React.createRef();
-    // let value = document.getElementById('texts').value;
-    let helllo = () =>{
-        alert(news.current.value)
+    let addNewPost = () =>{
+        alert(props.addNewPost(news));
     }
     return (
         <div className={style.postPage}>
             <div className={style.posts}>
                 <img src={image} alt=""/>
                 <textarea name="postInput" ref={news} id="texts" cols="50" rows="3"></textarea>
-                <button onClick={helllo} className="main-btn">Publish</button>
+                <button onClick={addNewPost} className="main-btn">Publish</button>
             </div>
+            {/*<h1>{news.current.value == true ? news.current.value: {}}</h1>*/}
             { props.posts.map((post) => < Post key={post.id} name={post.name}  desc={post.desc} image={post.image}/> )}
         </div>
     )

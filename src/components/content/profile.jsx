@@ -21,7 +21,7 @@ const Profile = (props) =>{
                     </div>
                 </div>
             </div>
-            <PostsPage posts={props.posts}/>
+            <PostsPage addNewPost={props.addNewPost} posts={props.posts}/>
         </div>
     )
 }
